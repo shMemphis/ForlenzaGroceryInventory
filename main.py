@@ -56,6 +56,17 @@ inventory = {
 }
 
 while True:
+    ListOn_Off = input("Keep Inventory Display?(Y/N)")
+    if ListOn_Off == "Y":
+        print("Current Inventory:")
+        for name in inventory:
+            item = inventory[name]
+            print(f"{name}: Price: ${item['price']:.2f}, Quantity: {item['quantity']}")
+    else:
+            print("Error...")
+            break
+
+while True:
     print("\n1. Add item\n2. Remove item\n3. Update quantity\n4. Display inventory\n5. Exit")
     choice = input("Enter your choice (1-5): ")
 
